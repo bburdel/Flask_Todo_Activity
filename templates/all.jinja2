@@ -1,0 +1,16 @@
+{% extends 'base.jinja2' %}
+
+{% block subtitle %}All the things{% endblock subtitle %}
+
+{% block content %}
+<ul style="font-family: Avenir,serif">
+    {% for task in tasks %}
+    <li style="font-family: Avenir,serif">
+        {{ task.task_name }} {% if task.task_performed %}Done on
+        {{ task.task_performed }} by {{ task.performed_by_id }}{% else %}
+        Undone {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
+    

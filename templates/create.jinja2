@@ -1,0 +1,23 @@
+{% extends 'base.jinja2' %}
+
+{% block subtitle %}Here, add a new task!{% endblock subtitle %}
+
+{# Luis's style I would like to test #}
+{#{% block content %}#}
+{#    <p>Task Name:#}
+{#    <form method="POST">#}
+{#        <label for="task_name">Task Name:</label><input type="submit" value="Add task to list!">#}
+{#    </form>#}
+{#{% endblock content %}#}
+
+{# Video styled solution #}
+{% block content %}
+    <form method="POST">
+        <label for="name-input" >Task name:</label><input id="name-input" type="text" name="task_name">
+        <input type="submit" value="Create task!">
+    </form>
+{% endblock content %}
+
+
+
+
